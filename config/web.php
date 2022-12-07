@@ -70,6 +70,14 @@ if (YII_ENV_DEV) {
         'class' => 'yii\gii\Module',
         // uncomment the following to add your IP if you are not connecting from localhost.
         //'allowedIPs' => ['127.0.0.1', '::1'],
+        'generators' => [ //here
+            'crud' => [ // generator name
+                'class' => 'yii\gii\generators\crud\Generator', // generator class
+                'templates' => [ //setting for the templates
+                    'Flatbed' => '@vendor/ramprasadm1986/yii2-flatbed/gii/templates/crud',
+                ]
+            ]
+        ]
     ];
 }
 
